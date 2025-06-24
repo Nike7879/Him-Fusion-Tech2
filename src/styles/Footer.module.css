@@ -1,0 +1,164 @@
+.footer {
+  background-color: #f9fafb;
+  border-top: 1px solid #e5e7eb;
+  margin-top: auto;
+  padding: 40px 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footerContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.footerLinks {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.footerLink {
+  text-decoration: none;
+  color: #6b7280;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+.footerLink:hover {
+  color: #3b82f6;
+}
+
+.footerLink::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 1px;
+  bottom: -2px;
+  left: 0;
+  background-color: #3b82f6;
+  transition: width 0.3s ease;
+}
+
+.footerLink:hover::after {
+  width: 100%;
+}
+
+.socialMedia {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.socialText {
+  color: #6b7280;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.socialIcons {
+  display: flex;
+  gap: 12px;
+}
+
+.socialLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 50%;
+  color: #6b7280;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.socialLink:hover {
+  background-color: #3b82f6;
+  color: #ffffff;
+  border-color: #3b82f6;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(59, 130, 246, 0.3);
+}
+
+.socialLink svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .footer {
+    padding: 30px 0;
+  }
+
+  .container {
+    padding: 0 15px;
+  }
+
+  .footerContent {
+    flex-direction: column;
+    text-align: center;
+    gap: 25px;
+  }
+
+  .footerLinks {
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .socialMedia {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .socialText {
+    font-size: 0.85rem;
+  }
+
+  .socialIcons {
+    gap: 15px;
+  }
+
+  .socialLink {
+    width: 45px;
+    height: 45px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 10px;
+  }
+
+  .footerLinks {
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+  }
+
+  .footerLink {
+    font-size: 0.95rem;
+    padding: 5px 0;
+  }
+
+  .socialIcons {
+    gap: 10px;
+  }
+
+  .socialLink {
+    width: 42px;
+    height: 42px;
+  }
+}
